@@ -1,0 +1,338 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <meta name="viewpoint" content="width=device-width" , initial-scale="1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Source+Sans+Pro:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Source+Sans+Pro:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" interity="sha384-wxfXpqpZZVQGK6TAh5PVIGOfQNHSoD2xbE+QkPxCAF1NEevoEH3S10sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnj.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial;
+            background-color: deepskyblue;
+            box-sizing: border-box;
+            min-height:100vh;
+            justify-content:center;
+
+        }
+
+        .navbar {
+            overflow: hidden;
+            background-color: #333;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+            .navbar a {
+                float: left;
+                font-size: 16px;
+                color: white;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+            }
+
+        .dropdown {
+            float: right;
+            overflow: visible;
+        }
+
+            .dropdown .dropbtn {
+                cursor: pointer;
+                font-size: 35px;
+                border: none;
+                outline: none;
+                color: white;
+                padding: 14px 16px;
+                background-color: inherit;
+                font-family: inherit;
+                margin: 0;
+            }
+
+            .navbar a:hover, .dropdown:hover .dropbtn, .dropbtn:focus {
+                background-color: blue;
+            }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+            .dropdown-content a {
+                float: none;
+                color: black;
+                padding: 12px 16px;
+                text-decoration: none;
+                display: block;
+                text-align: left;
+            }
+
+            .dropdown-content a:hover {
+                    background-color: #ddd;
+            }
+
+        .show {
+            display: block;
+        }
+
+        .logo-image {
+            position: absolute;
+            width: 80px;
+            height: 10px;
+            overflow: visible;
+            margin-top: -6px;
+        }
+
+        h1 {
+            position:relative;
+            font-size: 5vw;
+            text-align:center;
+            color:deepskyblue;
+            -webkit-text-stroke: 0.3vw #8516d1;
+           
+        }
+
+            h1:before {
+            content: attr(data-text);
+            position: absolute;
+            top:0;
+            left:-2%;
+            width:0;
+            height:100%;
+            color: #d00b84;
+            -webkit-text-stroke: 0vw #8516d1;
+            border-radius: 2px solid #d00b84;
+            overflow:hidden;
+            animation: animate 6s linear;
+            
+            }
+
+        @keyframes animate
+        {
+            0%,10%, 100%
+            {
+                width: 0;
+            }
+            70%,90%
+            {
+                width: 100%;
+            }
+        }
+
+        .container {
+            width: 90%;
+            height: 80vh;
+            padding-left: 110px;
+            display: flex;
+            padding-top: 90px;
+            padding-bottom: 10px;
+           
+
+
+        }
+
+        .swiper {
+            width: 60%;
+            height: fit-content;
+        }
+
+        .swiper-slide img {
+            width: 115%;
+            box-shadow: 50px 50px 70px rgba(60,60,60);
+        }
+
+        .swiper .swiper-button-prev, .swiper .swiper-button-next {
+            color: #f2f2f2;
+        }
+
+        .container2 {
+            display:flex;
+            justify-content: center;
+            padding-top:5px;
+            overflow:visible;
+
+        }
+
+        .card {
+            background: white;
+            width: 270px;
+            height: 400px;
+            margin: 10px;
+            border-radius: 17px 17px;
+        }
+
+        .card-image {
+            background-color: deeppink;
+            height: 150px;
+            margin-bottom: 15px;
+        }
+
+        h2 {
+            text-align: center;
+            color: forestgreen;
+        }
+
+        h4 {
+            text-align: center;
+        }
+
+        p {
+            background-color: #177b9c;
+            text-align: center;
+            margin-left: 300px;
+            margin-right: 300px;
+            margin-bottom: 30px;
+            filter: drop-shadow( 15px 15px 10px black);
+        }
+
+        a {
+            color:red;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="dropdown">
+        <button class="dropbtn" onclick="myFunction()">
+
+            <i class="fa fa-bars" aria-hidden="true"></i>
+        </button>
+        <div class="dropdown-content" id="myDropdown">
+            <a href="file:///C:/Users/Thaak/Documents/about.html"><i class="fa fa-info-circle fa-2x" aria-hidden="true"></i></a>
+            <a href="file:///C:/Users/Thaak/Documents/gallery.html"><i class="fa fa-picture-o fa-2x" aria-hidden="true"></i></a>
+            <a href="file:///C:/Users/Thaak/Documents/contactpage.html"><i class="fa fa-phone-square fa-2x" aria-hidden="true"></i></a>
+        </div>
+    </div>
+    </div>
+    <a class="navbar-brand" href="C:\Users\Thaak\Downloads\newlogo.jpg">
+        <div class="logo-image">
+            <img src="C:\Users\Thaak\Downloads\newlogo.jpg" height="70">
+        </div>
+    </a>
+    <br /><br /><br />
+
+    <h1 data-text="ROYAL REAL ESTATES">ROYAL REAL ESTATES</h1>
+
+    <div class="container">
+        <div class="swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="C:\Users\Thaak\Downloads\house10.jpg" width="300" height="290"></div>
+                <div class="swiper-slide"><img src="C:\Users\Thaak\Downloads\house6.jpg" width="300" height="290"></div>
+                <div class="swiper-slide"><img src="C:\Users\Thaak\Downloads\house4.jpg" width="300" height="290"></div>
+
+
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+    </div>
+
+
+    <p>
+        being a property owner can<br />
+        be a great source of<br />
+        stress. it is difficult<br />
+        enough to find a reliable<br />
+        renant but in addition,<br />
+        once found, there are a<br />
+        great number of<br />
+        responsibilities during<br />
+        their tenancy.<a href="C:/Users/Thaak/Documents/about.html">See More</a>
+    </p>
+
+    <section class="container2">
+        <div class="card">
+            <div class="card-image card-1">
+                <img src="C:\Users\Thaak\Downloads\house12.jpg"  width="270" height="260"/>
+                <h2>25600000</h2>
+                <h4>Parkhurst</h4>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-image card-2">
+                <img src="C:\Users\Thaak\Downloads\cardimage2.jpg" width="270" height="260" /><br />
+                <h2>R1240000</h2>
+                <h4>Sandton</h4>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-image card-3">
+                <img src="C:\Users\Thaak\Downloads\cardimage3.jpg" width="270" height="260" />
+                <h2>3500000</h2>
+                <h4>Randburg</h4>
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="card-image card-4">
+                <img src="C:\Users\Thaak\Downloads\cardimage4.jpg" width="270" height="260" />
+                <h2>2000000</h2>
+                <h4>Meyersdal</h4>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+    <script>
+        function myFunction() {
+            document.getElementById("myDropdown").classList.toggle("show");
+        }
+
+        window.onclick = function (e) {
+            if (!e.target.matches('.dropbtn')) {
+                var myDropdown = document.getElementById("myDropdown");
+                if (myDropdown.classList.contains('show')) {
+                    myDropdown.classList.remove('show');
+                }
+            }
+        }
+
+        const swiper = new Swiper('.swiper', {
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+            },
+            loop: true,
+
+
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+
+        });
+    </script>
+
+</body>
+</html>

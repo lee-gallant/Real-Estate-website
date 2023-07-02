@@ -1,0 +1,211 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" interity="sha384-wxfXpqpZZVQGK6TAh5PVIGOfQNHSoD2xbE+QkPxCAF1NEevoEH3S10sibVcOQVnN" crossorigin="anonymous">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial;
+            background-color: deepskyblue;
+        }
+
+        .navbar {
+            overflow: hidden;
+            background-color: #333;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+            .navbar a {
+                float: left;
+                font-size: 16px;
+                color: white;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+            }
+
+        .dropdown {
+            float: right;
+            overflow: hidden;
+        }
+
+            .dropdown .dropbtn {
+                cursor: pointer;
+                font-size: 35px;
+                border: none;
+                outline: none;
+                color: white;
+                padding: 14px 16px;
+                background-color: inherit;
+                font-family: inherit;
+                margin: 0;
+            }
+
+            .navbar a:hover, .dropdown:hover .dropbtn, .dropbtn:focus {
+                background-color: blue;
+            }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+            .dropdown-content a {
+                float: none;
+                color: black;
+                padding: 12px 16px;
+                text-decoration: none;
+                display: block;
+                text-align: left;
+            }
+
+        .dropdown-content a:hover {
+                    background-color: #ddd;
+                }
+
+        .show {
+            display: block;
+        }
+
+        .logo-image {
+            width: 80px;
+            height: 10px;
+            overflow: visible;
+            margin-top: -6px;
+        }
+
+        h3 {
+            text-align: center;
+            font-size: 35px;
+        }
+
+        p {
+            text-align: center;
+        }
+
+        /* The grid: Four equal columns that floats next to each other */
+        .column {
+            float: left;
+            width: 25%;
+            padding: 10px;
+        }
+
+            /* Style the images inside the grid */
+            .column img {
+                opacity: 0.8;
+                cursor: pointer;
+            }
+
+                .column img:hover {
+                    opacity: 1;
+                }
+
+        /* Clear floats after the columns */
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        /* The expanding image container */
+        .container {
+            position: relative;
+            display: none;
+        }
+
+        /* Expanding image text */
+        #imgtext {
+            position: absolute;
+            bottom: 15px;
+            left: 15px;
+            color: white;
+            font-size: 20px;
+        }
+
+        /* Closable button inside the expanded image */
+        .closebtn {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            color: white;
+            font-size: 35px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="dropdown">
+        <button class="dropbtn" onclick="myFunction()">
+           
+            <i class="fa fa-bars" aria-hidden="true"></i>
+        </button>
+        <div class="dropdown-content" id="myDropdown">
+            <a href="file:///C:/Users/Thaak/Documents/homepage.html"><i class="fa fa-home fa-2x" aria-hidden="true"></i></a>
+            <a href="file:///C:/Users/Thaak/Documents/about.html"><i class="fa fa-info-circle fa-2x" aria-hidden="true"></i></a>
+            <a href="file:///C:/Users/Thaak/Documents/contactpage.html"><i class="fa fa-phone-square fa-2x" aria-hidden="true"></i></a>
+        </div>
+    </div>
+    </div>
+    <a class="navbar-brand" href="C:\Users\Thaak\Downloads\newlogo.jpg">
+        <div class="logo-image">
+            <img src="C:\Users\Thaak\Downloads\newlogo.jpg" height="70">
+        </div>
+    </a><br/><br/><br/>
+
+    <h3>GALLERY</h3>
+    <p>shop for your perfect home now!</p>
+
+    <script>
+        function myFunction() {
+            document.getElementById("myDropdown").classList.toggle("show");
+        }
+
+        window.onclick = function (e) {
+            if (!e.target.matches('.dropbtn')) {
+                var myDropdown = document.getElementById("myDropdown");
+                if (myDropdown.classList.contains('show')) {
+                    myDropdown.classList.remove('show');
+                }
+            }
+        }
+    </script>
+
+    <div class="row">
+        <div class="column">
+            <img src="C:\Users\Thaak\Downloads\house2.jpg" style="width:100%" width="275" height="243" onclick="myFunction(this);">
+        </div>
+        <div class="column">
+            <img src="C:\Users\Thaak\Downloads\house3.jpeg" style="width:100%" width="275" height="243" onclick="myFunction(this);">
+        </div>
+        <div class="column">
+            <img src="C:\Users\Thaak\Downloads\house6.jpg" style="width:100%" width="275" height="243" onclick="myFunction(this);">
+        </div>
+        <div class="column">
+            <img src="C:\Users\Thaak\Downloads\house8.jpg" style="width:100%" width="275" height="243" onclick="myFunction(this);">
+        </div>
+        <div class="column">
+            <img src="C:\Users\Thaak\Downloads\house9.jpg" style="width:100%" width="275" height="243" onclick="myFunction(this);">
+        </div>
+        <div class="column">
+            <img src="C:\Users\Thaak\Downloads\house10.jpg" style="width:100%" width="275" height="243" onclick="myFunction(this);">
+        </div>
+        <div class="column">
+            <img src="C:\Users\Thaak\Downloads\house11.jpg" style="width:100%" width="275" height="243" onclick="myFunction(this);">
+        </div>
+        <div class="column">
+            <img src="C:\Users\Thaak\Downloads\house12.jpg" style="width:100%" width="275" height="243" onclick="myFunction(this);">
+        </div>
+    </div>
+
+</body>
+</html>
+

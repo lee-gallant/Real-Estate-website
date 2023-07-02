@@ -1,0 +1,374 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Comfy luxury homes</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Source+Sans+Pro:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Source+Sans+Pro:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" interity="sha384-wxfXpqpZZVQGK6TAh5PVIGOfQNHSoD2xbE+QkPxCAF1NEevoEH3S10sibVcOQVnN" crossorigin="anonymous">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial;
+            background-color: deepskyblue;
+        }
+
+        .navbar {
+            overflow: hidden;
+            background-color: #333;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+            .navbar a {
+                float: left;
+                font-size: 16px;
+                color: white;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+            }
+
+        .dropdown {
+            float: right;
+            overflow: hidden;
+        }
+
+            .dropdown .dropbtn {
+                cursor: pointer;
+                font-size: 35px;
+                border: none;
+                outline: none;
+                color: white;
+                padding: 14px 16px;
+                background-color: inherit;
+                font-family: inherit;
+                margin: 0;
+            }
+
+            .navbar a:hover, .dropdown:hover .dropbtn, .dropbtn:focus {
+                background-color: blue;
+            }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+            .dropdown-content a {
+                float: none;
+                color: black;
+                padding: 12px 16px;
+                text-decoration: none;
+                display: block;
+                text-align: left;
+            }
+
+                .dropdown-content a:hover {
+                    background-color: #ddd;
+                }
+
+        .show {
+            display: block;
+        }
+
+        .logo-image {
+            width: 80px;
+            height: 10px;
+            overflow: visible;
+            margin-top: -6px;
+        }
+
+        .section {
+            width: 100%;
+            min-height: 50vh;
+            background-color:deepskyblue;
+        }
+
+        .container {
+            width: 80%;
+            display: block;
+            margin: 10%;
+            padding-top: 10vh;
+            padding-left: -20vh;
+            background-color: green;
+            height: 50vh;
+            box-shadow: 12px 12px 8px black;
+            padding-bottom: 160px;
+        }
+
+        .content-section {
+            float: left;
+            width: 55%;
+            box-shadow: 12px 12px 8px black;
+            
+        }
+
+
+            .content-section .content p {
+                margin-top: 10px;
+                font-family: sans-serif;
+                font-size: 17px;
+                line-height: 1.5;
+                float: left;
+            }
+
+        .h1 {
+            font-family: 'Source Sans Pro', sans-serif;
+
+        }
+
+        .image {
+            float: right;
+            height: 380px;
+            width: 600px;
+            margin-top: 10px;
+            padding-bottom: 10%;
+            padding-top: -20%;
+            filter: drop-shadow( 15px 15px 10px black);
+        }
+
+
+        .content.section .content .button1 {
+            margin-top: 30px;
+        }
+
+        .content-section .content .button1 * {
+            background-color: #13acb1;
+            padding: 12px 40px;
+            text-decoration: none;
+            color: deepskyblue;
+            font-size: 25px;
+            letter-spacing: 1.5px;
+        }
+
+        .content-section .content .button *:hover {
+            background-color: cadetblue;
+            color: #fff;
+        }
+
+        .media li {
+            margin-top: 10px;
+            color: mediumvioletred;
+            font-size: 15px;
+            padding: 20px 10px;
+            display: table-cell;
+        }
+
+        .container2 {
+            display: flex;
+            justify-content: center;
+            padding-top: 5px;
+            overflow: visible;
+        }
+
+        .card {
+            background: white;
+            width: 270px;
+            height: 400px;
+            margin: 10px;
+            border-radius: 17px 17px;
+        }
+
+        .card-image {
+            background-color: deeppink;
+            height: 150px;
+            margin-bottom: 15px;
+        }
+
+        h2 {
+            text-align: center;
+            color: forestgreen;
+        }
+
+        h3 {
+            text-align: center;
+        }
+
+        h4 {
+            text-align: center;
+        }
+
+        p2 {
+            font-size: 11px;
+            line-height: 0.4cm;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="dropdown">
+        <button class="dropbtn" onclick="myFunction()">
+
+            <i class="fa fa-bars" aria-hidden="true"></i>
+        </button>
+        <div class="dropdown-content" id="myDropdown">
+            <a href="file:///C:/Users/Thaak/Documents/homepage2.html"><i class="fa fa-home fa-2x" aria-hidden="true"></i></a>
+            <a href="file:///C:/Users/Thaak/Documents/gallery.html"><i class="fa fa-picture-o fa-2x" aria-hidden="true"></i></a>
+            <a href="file:///C:/Users/Thaak/Documents/contactpage.html"><i class="fa fa-phone-square fa-2x" aria-hidden="true"></i></a>
+        </div>
+    </div>
+    </div>
+    <a class="navbar-brand" href="C:\Users\Thaak\Downloads\newlogo.jpg">
+        <div class="logo-image">
+            <img src="C:\Users\Thaak\Downloads\newlogo.jpg" height="70">
+        </div>
+    </a><br /><br /><br />
+
+    <div class="section">
+        <div class="container">
+            <div class="container-section">
+                <div class="title">
+                    <img src="C:\Users\Thaak\Downloads\house11.jpg" class="image" />
+
+                </div>
+                <div class="content">
+                    <h1>Comfy luxury homes</h1><br />
+                    <h3>WHAT WE DO</h3>
+                    <p1>
+                        being a property owner can
+                        be a great source of
+                        stress. it is difficult
+                        enough to find a reliable
+                        renant but in addition,
+                        once found, there are a
+                        great number of
+                        responsibilities during
+                        their tenancy.
+
+                        we believe that the only,
+                        true way of providing value,
+                        is by offering a hands on
+                        approach this means visiting
+                        the community schemes
+                        regualry as apposed to just
+                        sitting behind a desk
+                        administering paperwork.
+                    </p1>
+
+                </div>
+                <div class="button1">
+                    <a href="file:///C:/Users/Thaak/Documents/contactpage.html">Contact Us</a>
+                </div>
+            </div>
+            <div class="media">
+                <ul>
+                    <li><i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i></li>
+                    <li><i class="fa fa-instagram fa-2x" aria-hidden="true"></i></li>
+                    <li><i class="fa fa-whatsapp fa-2x" aria-hidden="true"></i></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <section class="container2">
+        <div class="card">
+            <div class="card-image card-1">
+                <img src="C:\Users\Thaak\Downloads\house12.jpg" width="270" height="150" />
+                <h2>Investment</h2>
+                <h4>Services</h4>
+                <br />
+                <p2>
+                    We provide a bespoke advisory
+                    services to assist you with
+                    investing abroad. with an
+                    extensive understanding of
+                    the overseas property market,
+                    we can help you build and
+                    diversify your wealth through
+                    foreign real estate.
+                </p2>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-image card-2">
+                <img src="C:\Users\Thaak\Downloads\cardimage2.jpg" width="270" height="150" />
+                <h2>Brokerage</h2>
+                <h4>Service</h4>
+                <br />
+                <p2>
+                    Royal Real Estates offers a
+                    sales and rental solution
+                    for many of our clients. if
+                    you are interested in
+                    selling, buying or renting,
+                    please be sure to contact
+                    us.
+                </p2>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-image card-3">
+                <img src="C:\Users\Thaak\Downloads\cardimage3.jpg" width="270" height="150" />
+                <h2>Tenant</h2>
+                <h4>Services</h4>
+                <br />
+                <p2>
+                    The foundation for a good
+                    tenancy is sourcing and
+                    placing great tenants. We
+                    know our neighbourhoods, we
+                    know our properties, and
+                    work very close with our
+                    landlords to ensure their
+                    investments is protected by
+                    the placement of the best
+                    possible tenants.
+                </p2>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-image card-4">
+                <img src="C:\Users\Thaak\Downloads\cardimage4.jpg" width="270" height="150" />
+                <h2>Property</h2>
+                <h4>Management</h4>
+                <br />
+                <p2>
+                    We are a dynamic, innovative
+                    and professional company
+                    that strives to add value to,
+                    reduce costs as well as
+                    improving the lifestyles
+                    within the communities we
+                    manage.
+                </p2>
+            </div>
+        </div>
+    </section>
+
+
+    <script>
+
+        function myFunction() {
+            document.getElementById("myDropdown").classList.toggle("show");
+        }
+
+        window.onclick = function (e) {
+            if (!e.target.matches('.dropbtn')) {
+                var myDropdown = document.getElementById("myDropdown");
+                if (myDropdown.classList.contains('show')) {
+                    myDropdown.classList.remove('show');
+                }
+            }
+        }
+    </script>
+</body>
+</html>
